@@ -1,0 +1,31 @@
+name: express-react-pdf Core Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.15
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.15
+      - name: Enter core
+        run: cd core
+      - name: Install dependencies
+        run: yarn install
+      - name: Run production build
+        run: yarn run build
+      - name: Push to github packages
+        run: |
+          cp .npmrc dist
+          cd dist
+          npm version "v0.1.${GITHUB_RUN_NUMBER}"
+          npm publish

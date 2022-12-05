@@ -1,4 +1,4 @@
-name: PDF-Templating Checks
+name: Core Checks
 
 on:
   pull_request:
