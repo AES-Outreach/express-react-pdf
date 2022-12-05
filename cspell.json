@@ -1,0 +1,12 @@
+{
+  "version": "0.2",
+  "ignorePaths": ["./deps"],
+  "dictionaryDefinitions": [
+    {
+      "name": "allow",
+      "path": "./.github/actions/spelling/allow.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["allow"]
+}
