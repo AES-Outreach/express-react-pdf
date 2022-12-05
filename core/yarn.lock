@@ -5,40 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@aes-outreach/express-react-pdf@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@aes-outreach/express-react-pdf@workspace:."
-  dependencies:
-    "@react-pdf/renderer": ^3.0.0
-    "@testing-library/react": ^13.4.0
-    "@types/express": ^4.17.14
-    "@types/node": ^18.8.0
-    "@types/react": ^18.0.21
-    "@typescript-eslint/eslint-plugin": ^5.4.0
-    "@typescript-eslint/parser": ^5.4.0
-    cspell: ^6.12.0
-    eslint: ^8.2.0
-    eslint-config-airbnb-typescript: ^16.0.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-eslint-comments: ^3.2.0
-    eslint-plugin-import: ^2.26.0
-    eslint-plugin-no-only-tests: ^3.0.0
-    eslint-plugin-prefer-arrow: ^1.2.3
-    eslint-plugin-react: latest
-    eslint-plugin-unused-imports: ^2.0.0
-    expect: ^29.2.1
-    express: ^4.18.1
-    lint-staged: ^12.3.4
-    prettier: 2.3.1
-    react: ^18.2.0
-    typescript: ^4.8.4
-  peerDependencies:
-    "@react-pdf/renderer": ^3.0.0
-    express: ^4.18.1
-    react: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13":
   version: 7.18.6
   resolution: "@babel/code-frame@npm:7.18.6"
@@ -555,6 +521,40 @@ __metadata:
   checksum: 190c643f156d8f8f277bf2a6078af1ffde1fd43f498f187c2db24d35b4b4b5785c02c7dc52e356497b9a1b65b13edc996de08de0b961c32844364da02986dc53
   languageName: node
   linkType: hard
+
+"@outstem/express-react-pdf@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@outstem/express-react-pdf@workspace:."
+  dependencies:
+    "@react-pdf/renderer": ^3.0.0
+    "@testing-library/react": ^13.4.0
+    "@types/express": ^4.17.14
+    "@types/node": ^18.8.0
+    "@types/react": ^18.0.21
+    "@typescript-eslint/eslint-plugin": ^5.4.0
+    "@typescript-eslint/parser": ^5.4.0
+    cspell: ^6.12.0
+    eslint: ^8.2.0
+    eslint-config-airbnb-typescript: ^16.0.0
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-eslint-comments: ^3.2.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-no-only-tests: ^3.0.0
+    eslint-plugin-prefer-arrow: ^1.2.3
+    eslint-plugin-react: latest
+    eslint-plugin-unused-imports: ^2.0.0
+    expect: ^29.2.1
+    express: ^4.18.1
+    lint-staged: ^12.3.4
+    prettier: 2.3.1
+    react: ^18.2.0
+    typescript: ^4.8.4
+  peerDependencies:
+    "@react-pdf/renderer": ^3.0.0
+    express: ^4.18.1
+    react: ^18.2.0
+  languageName: unknown
+  linkType: soft
 
 "@react-pdf/fns@npm:2.0.0":
   version: 2.0.0
