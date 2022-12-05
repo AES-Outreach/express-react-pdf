@@ -29,7 +29,6 @@ jobs:
       - name: Push to NPM
         working-directory: ./core
         run: |
-          npm login
           npm version "v0.1.${GITHUB_RUN_NUMBER}"
           npm publish
         env:
