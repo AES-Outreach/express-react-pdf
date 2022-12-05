@@ -18,6 +18,7 @@ module.exports = {
       parserOptions: {
         sourceType: "module",
         project: ["./tsconfig.test.json"],
+        tsconfigRootDir: __dirname,
       },
       extends: [
         "eslint:recommended",
