@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# compiled output
+/deps
+/dist
+
+# dependencies
+/node_modules
+
+# IDE - VSCode
+.vs/*
+.vscode/*
+.editorconfig
+
+# misc
+npm-debug.log
+yarn-error.log
+
+#Cspell Cache
+.cspellcache
+
+# Betterer Cache
+.betterer.cache
+
+# Yarn Berry
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
