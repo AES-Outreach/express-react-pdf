@@ -1,5 +1,5 @@
 {
-  "name": "@aes-outreach/express-react-pdf",
+  "name": "@outstem/express-react-pdf",
   "version": "0.0.0",
   "description": "Middleware generator for react-pdf in express",
   "main": "dist/index.js",
