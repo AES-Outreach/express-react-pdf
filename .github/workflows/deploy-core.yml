@@ -1,9 +1,14 @@
 name: Core Deployment
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
       - master
+      ## See if i can filter by files
+      ## Otherwise use changed files
 jobs:
   deploy:
     runs-on: ubuntu-latest

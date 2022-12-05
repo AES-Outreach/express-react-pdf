@@ -2414,10 +2414,6 @@ __metadata:
     prettier: 2.3.1
     react: ^18.2.0
     typescript: ^4.8.4
-  peerDependencies:
-    "@react-pdf/renderer": ^3.0.0
-    express: ^4.18.1
-    react: ^18.2.0
   languageName: unknown
   linkType: soft
 
