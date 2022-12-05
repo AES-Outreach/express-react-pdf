@@ -7,8 +7,8 @@ on:
   push:
     branches:
       - master
-      ## See if i can filter by files
-      ## Otherwise use changed files
+    paths:
+      - 'core/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
