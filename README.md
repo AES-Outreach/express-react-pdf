@@ -10,5 +10,5 @@ Core contains the middleware builder and PDF wrapper, as well as the base root c
 Prebuilt contains additional prebuilt middleware that can be used, for example integrating i18Next
 ## Hooks
 To set up precommit hooks with husky, run the following
-`npm install -g husky`
+`npm install -g husky`\
 `npx husky install .husky`
