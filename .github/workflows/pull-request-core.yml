@@ -18,17 +18,21 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.17
-      - name: Enter core
-        run: cd core
       - name: Install dependencies
+        working-directory: ./core
         run: yarn install
       - name: Run prettier
+        working-directory: ./core
         run: yarn prettier:check
       - name: Linter
+        working-directory: ./core
         run: yarn lint
       - name: Spell check
+        working-directory: ./core
         run: npx cspell "**/*.{md,js,ts,tsx}"
-      - name: Run unit tests
-        run: yarn test:unit
+      # - name: Run unit tests
+      #   working-directory: ./core
+      #   run: yarn test
       - name: Run production build
+        working-directory: ./core
         run: yarn build

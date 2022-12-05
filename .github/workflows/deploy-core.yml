@@ -17,13 +17,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.15
-      - name: Enter core
-        run: cd core
       - name: Install dependencies
+        working-directory: ./core
         run: yarn install
       - name: Run production build
+        working-directory: ./core
         run: yarn run build
       - name: Push to github packages
+        working-directory: ./core
         run: |
           cp .npmrc dist
           cd dist
