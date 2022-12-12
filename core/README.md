@@ -66,7 +66,7 @@ export const I18NextRootContext = ({
 **Middleware**
 
 ```ts
-export const i18NextPDFGenerator = pdfMiddlewareBuilder(
+export const i18NextPDFMiddleware = pdfMiddlewareBuilder(
   I18NextRootContext,
   (req) => ({
     translate: req.i18n,
