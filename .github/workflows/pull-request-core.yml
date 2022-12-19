@@ -1,0 +1,38 @@
+name: Core Checks
+
+on:
+  pull_request:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Uses Node.js 14.17
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.17
+      - name: Install dependencies
+        working-directory: ./core
+        run: yarn install
+      - name: Run prettier
+        working-directory: ./core
+        run: yarn prettier:check
+      - name: Linter
+        working-directory: ./core
+        run: yarn lint
+      - name: Spell check
+        working-directory: ./core
+        run: npx cspell "**/*.{md,js,ts,tsx}"
+      # - name: Run unit tests
+      #   working-directory: ./core
+      #   run: yarn test
+      - name: Run production build
+        working-directory: ./core
+        run: yarn build

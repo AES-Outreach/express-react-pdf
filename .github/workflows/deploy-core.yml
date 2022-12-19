@@ -1,0 +1,30 @@
+name: Core Deployment
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'core/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.15
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.15
+      - name: Install dependencies
+        working-directory: ./core
+        run: yarn install
+      - name: Run production build
+        working-directory: ./core
+        run: yarn run build
+      - name: Push to NPM
+        working-directory: ./core
+        run: |
+          npm version "v1.0.${GITHUB_RUN_NUMBER}"
+          npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
