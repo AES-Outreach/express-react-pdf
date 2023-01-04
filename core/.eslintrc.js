@@ -55,6 +55,7 @@ module.exports = {
             checksVoidReturn: false,
           },
         ],
+        "@typescript-eslint/no-non-null-assertion": "error",
         "no-restricted-properties": [
           2,
           {
