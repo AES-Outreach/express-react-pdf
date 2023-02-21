@@ -33,4 +33,4 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         with:
           webhookUrl: ${{ secrets.WEBHOOK_URL_MERGE_FAILURE }}
-          details: 'express-react-pdf deployment failed!'
+          details: 'express-react-pdf merge workflow failed!'
