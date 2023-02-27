@@ -28,3 +28,9 @@ jobs:
           npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Ping Discord on failure
+        if: ${{ failure() }}
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+          webhookUrl: ${{ secrets.WEBHOOK_URL_MERGE_FAILURE }}
+          details: 'express-react-pdf merge workflow failed!'
